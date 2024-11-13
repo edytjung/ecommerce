@@ -48,7 +48,7 @@ class BrandResource extends Resource
                                 ->disabled()
                                 ->maxLength(255)
                                 ->dehydrated()
-                                ->unique(Category::class, 'slug', ignoreRecord: true),
+                                ->unique(Brand::class, 'slug', ignoreRecord: true),
                         ]),
 
                         FileUpload::make('image')
