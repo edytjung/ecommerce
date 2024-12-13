@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
+use App\Filament\Resources\OrderResource\RelationManagers\AddressRelationManager;
 use App\Models\Order;
 use App\Models\Product;
 use Filament\Forms;
@@ -35,6 +36,7 @@ use Filament\Tables\Actions\ViewAction;
 class OrderResource extends Resource
 {
     protected static ?string $model = Order::class;
+    protected static ?int $navigationSort = 5;
 
     protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
 
@@ -221,6 +223,7 @@ class OrderResource extends Resource
     {
         return [
             //
+            AddressRelationManager::class,
         ];
     }
 

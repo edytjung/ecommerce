@@ -28,9 +28,9 @@ use Str;
 class BrandResource extends Resource
 {
     protected static ?string $model = Brand::class;
-
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
-
+    protected static ?string $recordTitleAttribute = 'name';
     public static function form(Form $form): Form
     {
         return $form
